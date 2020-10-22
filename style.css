@@ -1,0 +1,174 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #8bc6ec;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.todo__title {
+  text-align: center;
+  padding-top: 50px;
+  margin: 0 0 50px;
+}
+
+.todo__form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.todo__form-wrapper {
+  position: relative;
+}
+
+.todo__input {
+  font-family: inherit;
+  font-size: 20px;
+  width: 400px;
+  height: 45px;
+  padding: 0 45px 0 15px;
+  color: #fff;
+  background-color: #8bc6ec;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  display: block;
+  outline: none;
+}
+
+.btn {
+  font-size: 0;
+  border: none;
+  background-color: transparent;
+  display: block;
+  margin: 0 auto;
+  outline: none;
+  cursor: pointer;
+}
+
+.todo__btn-add {
+  border-radius: 5px;
+  top: 0;
+  right: 5px;
+  transform: translateY(50%);
+  position: absolute;
+  transition: 0.4s;
+}
+
+.todo__btn-add svg {
+  width: 20px;
+  height: 20px;
+}
+
+.todo__btn-add:hover {
+  fill: #fff;
+}
+
+.todo__list {
+  list-style: none;
+  padding-left: 0;
+  min-width: 300px;
+}
+
+.todo__list-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  transition: 0.6s;
+  max-width: 568px;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.todo__list-item {
+  flex: 1;
+  padding: 0 10px 0 15px;
+}
+
+.todo__btn-checked,
+.todo__btn-delete {
+  margin: 0;
+  padding: 7px 5px;
+  z-index: 5;
+}
+
+.todo__btn-checked svg {
+  width: 20px;
+  height: 20px;
+  fill: rgb(90, 197, 90);
+  pointer-events: none;
+}
+
+.todo__btn-delete svg {
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.form__select-wrapper {
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+.form__select-wrapper::after {
+  content: "\25BC";
+  top: 0;
+  left: 120px;
+  transform: translateY(14%);
+  color: rgba(48, 48, 48, 0.8);
+  position: absolute;
+  pointer-events: none;
+}
+
+.form__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 25px 5px 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #fff;
+}

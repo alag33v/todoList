@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <section class="todo">
+    <div class="container">
+      <h1 class="todo__title">To Do List</h1>
+      <form class="todo__form">
+        <div class="todo__form-wrapper">
+          <input class="todo__input" type="text">
+          <button class="todo__btn-add btn" type="submit">
+            <svg height="426.66667pt" viewBox="0 0 426.66667 426.66667" width="426.66667pt"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m405.332031 192h-170.664062v-170.667969c0-11.773437-9.558594-21.332031-21.335938-21.332031-11.773437 0-21.332031 9.558594-21.332031 21.332031v170.667969h-170.667969c-11.773437 0-21.332031 9.558594-21.332031 21.332031 0 11.777344 9.558594 21.335938 21.332031 21.335938h170.667969v170.664062c0 11.777344 9.558594 21.335938 21.332031 21.335938 11.777344 0 21.335938-9.558594 21.335938-21.335938v-170.664062h170.664062c11.777344 0 21.335938-9.558594 21.335938-21.335938 0-11.773437-9.558594-21.332031-21.335938-21.332031zm0 0" />
+            </svg>
+          </button>
+        </div>
+        <div class="form__select-wrapper">
+          <select class="form__select" name="todos">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+          </select>
+        </div>
+      </form>
+      <div class="todo__container">
+        <ul class="todo__list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
