@@ -25,11 +25,13 @@ body {
 }
 
 .container {
-  margin: 0 auto;
   max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .todo__title {
+  font-size: 36px;
   text-align: center;
   padding-top: 50px;
   margin: 0 0 50px;
@@ -49,6 +51,7 @@ body {
   font-family: inherit;
   font-size: 20px;
   width: 400px;
+  max-width: 100%;
   height: 45px;
   padding: 0 45px 0 15px;
   color: #fff;
@@ -106,6 +109,10 @@ body {
   margin-bottom: 20px;
   transition: 0.6s;
   max-width: 568px;
+}
+
+.todo__list-wrapper:last-child {
+  margin-bottom: 50px;
 }
 
 .completed {
@@ -171,4 +178,28 @@ body {
   border-radius: 5px;
   background-color: transparent;
   border: 1px solid #fff;
+}
+
+/* Media */
+
+@media (max-width: 650px) {
+  .todo__form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .todo__container {
+    max-width: 100%;
+  }
+  .todo__input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  .todo__container {
+    width: 200px;
+  }
+  .todo__list-wrapper {
+    width: 97%;
+  }
 }
